@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Colt M. Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CM</span>
+        <span class="brand-name">Colt Melton</span>
+      </a>
+      <nav class="nav">
+        <button class="menu-toggle" data-menu aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" data-nav>
+          <a href="services.html">Services</a>
+          <a class="active" href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a class="btn ghost" href="contact.html">Free assessment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero container">
+      <div>
+        <p class="eyebrow">Proof of work</p>
+        <h1>Projects that saved time, hardened systems, and kept teams moving.</h1>
+        <p class="lede">Every project includes a clear problem, measurable outcome, and documented handoff.</p>
+      </div>
+    </section>
+
+    <section class="section container portfolio-list">
+      <article class="project-detail" id="reporting-bot">
+        <div class="project-head">
+          <p class="tiny-label">Automation</p>
+          <h2>Ops reporting bot</h2>
+          <p class="muted">Problem: Leadership waited days for clean field performance numbers.</p>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <p><strong>What I built</strong></p>
+            <p class="muted">Python + Google Sheets job that cleans data, highlights anomalies, and emails exec-ready scorecards nightly.</p>
+            <p><strong>Result</strong></p>
+            <p class="muted">80% time reduction on weekly reports; alerts now trigger within an hour.</p>
+            <p><strong>Tech</strong></p>
+            <p class="muted">Python, Pandas, Google Sheets API, cron, Gmail API</p>
+          </div>
+          <div class="project-panel">
+            <h4>Before</h4>
+            <ul>
+              <li>Manual CSV cleanup every Thursday</li>
+              <li>No single truth for metrics</li>
+              <li>Surprises at weekly reviews</li>
+            </ul>
+            <h4>After</h4>
+            <ul>
+              <li>Daily scorecards in inbox by 7am</li>
+              <li>Auto-flagged anomalies</li>
+              <li>Versioned logic with doc handoff</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-detail" id="zero-trust">
+        <div class="project-head">
+          <p class="tiny-label">Cybersecurity</p>
+          <h2>Zero-trust starter</h2>
+          <p class="muted">Problem: 15-person services firm had flat network and shared passwords.</p>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <p><strong>What I built</strong></p>
+            <p class="muted">Audit, MFA rollout, password policies, and patch cadence with monthly reviews.</p>
+            <p><strong>Result</strong></p>
+            <p class="muted">Closed nine critical gaps; phishing risk dropped after MFA training.</p>
+            <p><strong>Tech</strong></p>
+            <p class="muted">Microsoft 365, Intune, Azure AD, Nessus, PowerShell, JumpCloud</p>
+          </div>
+          <div class="project-panel">
+            <h4>Before</h4>
+            <ul>
+              <li>Shared credentials for core apps</li>
+              <li>No patch schedule or logging</li>
+              <li>Unknown device inventory</li>
+            </ul>
+            <h4>After</h4>
+            <ul>
+              <li>MFA on all critical systems</li>
+              <li>Documented offboarding flow</li>
+              <li>Monthly patch and audit cycle</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-detail" id="service-desk">
+        <div class="project-head">
+          <p class="tiny-label">Workflow</p>
+          <h2>Service desk setup</h2>
+          <p class="muted">Problem: Tickets were buried in email; no device visibility.</p>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <p><strong>What I built</strong></p>
+            <p class="muted">Helpdesk queue, device inventory, and uptime checks with playbooks for incidents.</p>
+            <p><strong>Result</strong></p>
+            <p class="muted">First-response SLAs cut in half; outages triaged in one view.</p>
+            <p><strong>Tech</strong></p>
+            <p class="muted">Freshservice, PowerShell, Intune, UptimeRobot, Mermaid diagrams</p>
+          </div>
+          <div class="project-panel">
+            <h4>Before</h4>
+            <ul>
+              <li>Support scattered across email threads</li>
+              <li>No map of devices or owners</li>
+              <li>Slow outage response</li>
+            </ul>
+            <h4>After</h4>
+            <ul>
+              <li>Intake form + auto-routing rules</li>
+              <li>Device and owner inventory</li>
+              <li>Dashboards for uptime and backups</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-detail" id="monitoring">
+        <div class="project-head">
+          <p class="tiny-label">Monitoring</p>
+          <h2>System monitoring script</h2>
+          <p class="muted">Problem: No early warning on resource spikes.</p>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <p><strong>What I built</strong></p>
+            <p class="muted">Lightweight agent that tracks CPU, memory, disk, and services, pushing alerts to Teams.</p>
+            <p><strong>Result</strong></p>
+            <p class="muted">Caught two outages before they hit customers; added incident runbooks.</p>
+            <p><strong>Tech</strong></p>
+            <p class="muted">Python, PowerShell, Windows Task Scheduler, Teams webhooks</p>
+          </div>
+          <div class="project-panel">
+            <h4>Before</h4>
+            <ul>
+              <li>Surprise outages with no logs</li>
+              <li>Reactive fixes only</li>
+            </ul>
+            <h4>After</h4>
+            <ul>
+              <li>Hourly health snapshots</li>
+              <li>Alerting with triage steps</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-detail" id="network-diagram">
+        <div class="project-head">
+          <p class="tiny-label">Networking</p>
+          <h2>Office network refresh</h2>
+          <p class="muted">Problem: Guests and staff shared a flat, unreliable network.</p>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <p><strong>What I built</strong></p>
+            <p class="muted">Segmented Wi-Fi/VLAN design, documented diagrams, and monitored uptime.</p>
+            <p><strong>Result</strong></p>
+            <p class="muted">No guest bleed-through; uptime improved with clear escalation paths.</p>
+            <p><strong>Tech</strong></p>
+            <p class="muted">UniFi, VLANs, DNS records, Backups, Diagramming</p>
+          </div>
+          <div class="project-panel">
+            <h4>Before</h4>
+            <ul>
+              <li>Guest traffic on production network</li>
+              <li>No topology documentation</li>
+            </ul>
+            <h4>After</h4>
+            <ul>
+              <li>Isolated guest SSIDs</li>
+              <li>Diagram + runbooks for changes</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta-strip container">
+      <div>
+        <p class="eyebrow">Want similar results?</p>
+        <h3>Tell me your top bottleneck. I’ll map the fastest fix.</h3>
+        <p class="muted">Small scopes ship fast and leave you with clear documentation.</p>
+      </div>
+      <a class="btn primary" href="contact.html">Start a project</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">CM</span>
+          <span class="brand-name">Colt Melton</span>
+        </div>
+        <p class="muted">Automation, cybersecurity, and support built for small businesses.</p>
+      </div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-meta">
+        <p class="muted">Based in Michigan · Remote friendly</p>
+        <p class="muted">Email: coltmeltonwork@gmail.com</p>
+        <p class="muted">Phone: 810-479-6235</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
