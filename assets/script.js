@@ -13,22 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const contactForm = document.querySelector('#contact-form');
+  const statusEl = document.querySelector('[data-form-status]');
   if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
       event.preventDefault();
-      const formData = new FormData(contactForm);
-      const name = formData.get('name') || '';
-      const email = formData.get('email') || '';
-      const company = formData.get('company') || '';
-      const phone = formData.get('phone') || '';
-      const project = formData.get('project') || '';
+      if (statusEl) statusEl.textContent = 'Sending...';
 
-      const subject = encodeURIComponent('Project inquiry');
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nPhone: ${phone}\nProject: ${project}`
-      );
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(contactForm),
+        });
 
-      window.location.href = `mailto:coltmeltonwork@gmail.com?subject=${subject}&body=${body}`;
+        if (res.ok) {
+          if (statusEl) statusEl.textContent = 'Thanks! Message sent.';
+          contactForm.reset();
+        } else {
+          if (statusEl) statusEl.textContent = 'Send failed. Please email me directly.';
+        }
+      } catch (err) {
+        if (statusEl) statusEl.textContent = 'Send failed. Please email me directly.';
+      }
     });
   }
 });
