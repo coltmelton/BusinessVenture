@@ -5,8 +5,8 @@
   --muted: #475569;
   --accent: #f97316;
   --accent-2: #0ea5e9;
-  --border: #e2e8f0;
-  --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  --border: #e6ebf3;
+  --shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
   --radius: 18px;
   --max-width: 1100px;
 }
@@ -215,6 +215,10 @@ img {
   padding: 4rem 0 3rem;
 }
 
+.layout-narrow {
+  max-width: 860px;
+}
+
 .eyebrow {
   font-size: 0.9rem;
   font-weight: 700;
@@ -234,6 +238,7 @@ h1, h2, h3, h4 {
   font-size: 1.05rem;
   color: var(--muted);
   max-width: 620px;
+  line-height: 1.7;
 }
 
 .muted {
@@ -349,11 +354,11 @@ h1, h2, h3, h4 {
 }
 
 .section {
-  padding: 3rem 0 2rem;
+  padding: 3.5rem 0 2.5rem;
 }
 
 .section-head {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .card-grid {
@@ -366,7 +371,7 @@ h1, h2, h3, h4 {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.25rem;
+  padding: 1.35rem;
   box-shadow: var(--shadow);
 }
 
@@ -422,7 +427,7 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
-  padding: 1.5rem;
+  padding: 1.75rem;
   background: linear-gradient(120deg, rgba(14, 165, 233, 0.15), rgba(249, 115, 22, 0.15));
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -520,7 +525,7 @@ h1, h2, h3, h4 {
 
 .contact-form {
   display: grid;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .contact-form label {
@@ -579,8 +584,13 @@ h1, h2, h3, h4 {
   margin: 0.5rem 0 0.75rem;
 }
 
+.reviews-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .form-note {
-  margin: 0;
+  margin: 0.25rem 0 0;
 }
 
 .contact-info p {
@@ -701,7 +711,8 @@ h1, h2, h3, h4 {
   }
 
   .contact-form input,
-  .contact-form textarea {
+  .contact-form textarea,
+  .contact-form select {
     font-size: 0.95rem;
   }
 }

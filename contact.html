@@ -89,46 +89,6 @@
       </div>
     </section>
 
-    <section class="section container">
-      <div class="card">
-        <p class="tiny-label">Reviews</p>
-        <h2>Leave a short review</h2>
-        <p class="muted">Share how the engagement went so others know what to expect.</p>
-        <form id="review-form" class="contact-form" action="https://formspree.io/f/xzznajyd" method="POST" data-formspree>
-          <input type="hidden" name="form_type" value="client_review">
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" required>
-          </label>
-          <label>
-            Company (optional)
-            <input type="text" name="company" placeholder="Company name">
-          </label>
-          <label>
-            Role (optional)
-            <input type="text" name="role" placeholder="Your role">
-          </label>
-          <label>
-            Rating
-            <select name="rating" required>
-              <option value="">Select rating</option>
-              <option value="5">5 - Excellent</option>
-              <option value="4">4 - Great</option>
-              <option value="3">3 - Good</option>
-              <option value="2">2 - Needs improvement</option>
-              <option value="1">1 - Poor</option>
-            </select>
-          </label>
-          <label>
-            Review
-            <textarea name="review" rows="4" placeholder="What worked well? What could be better?" required></textarea>
-          </label>
-          <button class="btn primary" type="submit">Submit review</button>
-          <p class="muted form-status" data-form-status></p>
-          <p class="muted tiny-label form-note">Thanks for taking a minute to share feedback.</p>
-        </form>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
