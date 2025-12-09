@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Colt M. Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CM</span>
+        <span class="brand-name">Colt Melton</span>
+      </a>
+      <nav class="nav">
+        <button class="menu-toggle" data-menu aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" data-nav>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a class="active" href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a class="btn ghost" href="contact.html">Free assessment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero container">
+      <div>
+        <p class="eyebrow">Reviews</p>
+        <h1>Share your experience working with me.</h1>
+        <p class="lede">Leave a 1-5 star rating, a short review, and optionally attach a photo/video or link.</p>
+        <div class="badge-row">
+          <span class="badge">Fast responses</span>
+          <span class="badge">Automation + diagnostics</span>
+          <span class="badge">Security-first</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="card">
+        <p class="tiny-label">Leave a review</p>
+        <h2>Tell others how the project went</h2>
+        <form id="review-page-form" class="contact-form" action="https://formspree.io/f/xzznajyd" method="POST" enctype="multipart/form-data" data-formspree>
+          <input type="hidden" name="form_type" value="client_review_full">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Company (optional)
+            <input type="text" name="company" placeholder="Company name">
+          </label>
+          <label>
+            Role (optional)
+            <input type="text" name="role" placeholder="Your role">
+          </label>
+          <div class="rating-group">
+            <p class="tiny-label">Rating</p>
+            <div class="star-rating" role="radiogroup" aria-label="Rating out of 5">
+              <input type="radio" id="star5" name="rating" value="5" required>
+              <label for="star5" aria-label="5 stars">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4" aria-label="4 stars">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3" aria-label="3 stars">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2" aria-label="2 stars">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1" aria-label="1 star">&#9733;</label>
+            </div>
+          </div>
+          <label>
+            Review
+            <textarea name="review" rows="4" placeholder="What worked well? What could be better?"></textarea>
+          </label>
+          <label>
+            Media upload (optional)
+            <input type="file" name="attachment" accept="image/*,video/*">
+          </label>
+          <label>
+            Media link (optional)
+            <input type="url" name="media_link" placeholder="https://link-to-image-or-video.com">
+          </label>
+          <button class="btn primary" type="submit">Submit review</button>
+          <p class="muted form-status" data-form-status></p>
+          <p class="muted tiny-label form-note">Your feedback helps future clients know what to expect. Thank you.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">CM</span>
+          <span class="brand-name">Colt Melton</span>
+        </div>
+        <p class="muted">Automation, cybersecurity, and support built for small businesses.</p>
+      </div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a class="active" href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-meta">
+        <p class="muted">Based in Michigan - Remote friendly</p>
+        <p class="muted">Email: coltmeltonwork@gmail.com</p>
+        <p class="muted">Phone: 810-479-6235</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

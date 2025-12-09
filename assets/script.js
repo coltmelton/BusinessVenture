@@ -12,23 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const contactForm = document.querySelector('#contact-form');
-  const statusEl = document.querySelector('[data-form-status]');
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (event) => {
+  const formspreeForms = document.querySelectorAll('[data-formspree]');
+  formspreeForms.forEach((form) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
+      const statusEl = form.querySelector('[data-form-status]');
       if (statusEl) statusEl.textContent = 'Sending...';
 
       try {
-        const res = await fetch(contactForm.action, {
+        const res = await fetch(form.action, {
           method: 'POST',
           headers: { Accept: 'application/json' },
-          body: new FormData(contactForm),
+          body: new FormData(form),
         });
 
         if (res.ok) {
           if (statusEl) statusEl.textContent = 'Thanks! Message sent.';
-          contactForm.reset();
+          form.reset();
         } else {
           if (statusEl) statusEl.textContent = 'Send failed. Please email me directly.';
         }
@@ -36,5 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if (statusEl) statusEl.textContent = 'Send failed. Please email me directly.';
       }
     });
-  }
+  });
 });

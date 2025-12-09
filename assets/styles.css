@@ -532,7 +532,8 @@ h1, h2, h3, h4 {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   padding: 0.75rem;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -543,10 +544,39 @@ h1, h2, h3, h4 {
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   border-color: var(--accent-2);
   outline: none;
   box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.18);
+}
+
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 0.25rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #cbd5e1;
+  transition: color 120ms ease;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f97316;
+}
+
+.rating-group {
+  margin: 0.5rem 0 0.75rem;
 }
 
 .form-note {
